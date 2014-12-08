@@ -1,0 +1,35 @@
+{
+  "name": "assemble-middleware-kssnode",
+  "description": "A Assemble middleware to generate KSS node styleguide",
+  "version": "0.0.1",
+  "homepage": "",
+  "author": {
+    "name": "David Thunman",
+    "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "kss-parse": "0.1.x",
+    "lodash-node": "2.4.x",
+    "gray-matter": "^0.4.2"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "assemble",
+    "assembleplugin",
+    "plugin"
+  ]
+}
