@@ -1,15 +1,15 @@
 {
   "name": "assemble-middleware-kssnode",
-  "description": "A Assemble middleware to generate KSS node styleguide",
+  "description": "An Assemble middleware to generate KSS node styleguide",
   "version": "0.0.1",
-  "homepage": "",
+  "homepage": "https://github.com/davthu/assemble-middleware-kssnode",
   "author": {
     "name": "David Thunman",
     "url": ""
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/davthu/assemble-middleware-kssnode.git"
   },
   "licenses": [
     {
