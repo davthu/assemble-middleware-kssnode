@@ -13,10 +13,9 @@ component: content
 
   {{#if markup}}
     {{#each modifiers}}
-      <p>
-        {{{description}}}<br>
+        {{{description}}}
         {{{modifierMarkup}}}
-      </p>
+        <hr>
     {{/each}}
     <pre><code class="html">{{markup}}</code></pre>
   {{/if}}
