@@ -6,7 +6,7 @@ Originally forked from [assemble-middleware-styleguide
 ](https://github.com/tomsky/assemble-middleware-styleguide) with modifications from [KSS Node](https://github.com/kss-node/kss-node). This middleware does pretty much the same thing except that it relies directly on KSS node rather than another fork. Another reason to make this module was the need to include KSS node generated pages in the site navigation as well as being able to parse arbitrary CSS files.
 
 ## Installation
-from the the command line, run:
+Run from the command line:
 
 ```bash
 npm install assemble-middleware-kssnode --save-dev
@@ -32,7 +32,7 @@ assemble: {
 	      mask: '*.css' // Optional
 	    }
 	  },
-	  files: [{
+    files: [{
       expand: true,
       cwd: 'templates/pages',
       src: ['**/*.hbs'],
