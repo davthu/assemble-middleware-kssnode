@@ -1,0 +1,22 @@
+{{#each sections}}
+<div id="section-{{reference}}">
+  <h{{depth}} class="docs-title">{{reference}} {{{header}}}</h{{depth}}>
+
+  {{#if description}}
+  <div>
+    {{{description}}}
+  </div>
+  {{/if}}
+
+  {{#if markup}}
+    <div>
+      {{#each modifiers}}
+        {{{description}}}
+        {{{modifierMarkup}}}
+      {{/each}}
+    </div>
+
+    <pre><code class="html">{{markup}}</code></pre>
+  {{/if}}
+</div>
+{{/each}}

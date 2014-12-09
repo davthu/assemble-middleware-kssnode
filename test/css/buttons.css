@@ -1,0 +1,124 @@
+/*
+Buttons
+
+* As a best practice, we highly recommend using the `<button>` element whenever possible to ensure matching cross-browser rendering.
+* While button classes can be used on `<a>` and `<button>` elements, only `<button>` elements are supported within our nav and navbar components.
+* You may use `.active` on `<button>`s should you need to replicate the active state programmatically.
+
+Styleguide 1.7
+*/
+
+/*
+Options
+
+Use any of the available button classes to quickly create a styled button.
+
+Markup:
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+
+Styleguide 1.7.1
+*/
+
+.btn {  }
+.btn-default {  }
+.btn-primary {  }
+.btn-success {  }
+.btn-info {  }
+.btn-warning {  }
+.btn-danger {  }
+.btn-link {  }
+
+.btn:focus {
+  outline: none !important;
+}
+
+/*
+Sizes
+
+Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
+
+Markup:
+<button type="button" class="btn btn-default {$modifiers}">Default</button>
+<button type="button" class="btn btn-primary {$modifiers}">Primary</button>
+<button type="button" class="btn btn-success {$modifiers}">Success</button>
+<button type="button" class="btn btn-info {$modifiers}">Info</button>
+<button type="button" class="btn btn-warning {$modifiers}">Warning</button>
+<button type="button" class="btn btn-danger {$modifiers}">Danger</button>
+<button type="button" class="btn btn-link {$modifiers}">Link</button>
+
+.btn-lg       - Large button
+.btn-sm       - Small button
+.btn-xs       - Extra small button
+
+Styleguide 1.7.2
+*/
+
+.btn-lg {  }
+.btn-sm {  }
+.btn-xs {  }
+
+/*
+Levels
+
+Create block level buttons - those that span the full width of a parent - by adding `.btn-block`.
+
+Markup:
+<button type="button" class="btn btn-primary {$modifiers}">Primary button</button>
+<button type="button" class="btn btn-default {$modifiers}">Default button</button>
+
+.btn-block    - Block level button
+
+Styleguide 1.7.3
+*/
+
+.btn-block {  }
+
+/*
+States
+
+Set active state with `:active` on button elements and `.active` on `<a>` elements. Use `.disabled`to set disabled state.
+
+Markup:
+<button type="button" class="btn btn-default {$modifiers}">Default</button>
+<button type="button" class="btn btn-primary {$modifiers}">Primary</button>
+<button type="button" class="btn btn-success {$modifiers}">Success</button>
+<button type="button" class="btn btn-info {$modifiers}">Info</button>
+<button type="button" class="btn btn-warning {$modifiers}">Warning</button>
+<button type="button" class="btn btn-danger {$modifiers}">Danger</button>
+<button type="button" class="btn btn-link {$modifiers}">Link</button>
+
+.active - Add the `.active` class to `<a>` buttons to achieve an `:active` state.
+.disabled - If you use `<button>` element, it is acceptable to add the `disabled="disabled"` attribute. Add the `.disabled` class to `<a>` buttons.
+
+Styleguide 1.7.4
+*/
+
+button.btn:active {  }
+a.btn.active {  }
+button.btn.disabled {  }
+a.btn.disabled {  }
+
+/*
+Button tags
+
+Use the button classes on an `<a>`, `<button>`, or `<input>` element.
+
+Markup:
+<a role="button" class="btn btn-default" href>Link</a>
+<button type="submit" class="btn btn-default">Button</button>
+<input type="button" class="btn btn-default" value="Input">
+<input type="submit" class="btn btn-default" value="Submit">
+
+Styleguide 1.7.5
+*/
+
+button.btn:active {  }
+a.btn.active {  }
+button.btn.disabled {  }
+a.btn.disabled {  }

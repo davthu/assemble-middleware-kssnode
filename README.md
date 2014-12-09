@@ -1,14 +1,17 @@
 # assemble-middleware-kssnode
 
-> Generates Assemble pages from KSS documented CSS
+> Generates Assemble pages from Knyle Style Sheets (KSS) documented CSS. 
 
+Originally forked from [assemble-middleware-styleguide
+](https://github.com/tomsky/assemble-middleware-styleguide) with modifications from [KSS Node](https://github.com/kss-node/kss-node).
 
-## Getting started
+## Installation
 In the command line, run:
 
 ```bash
 npm install assemble-middleware-kssnode --save-dev
 ```
+
 To register the plugin with Assemble in your project's Gruntfile you can simply add the module's name to the `plugins` option:
 
 ```js
@@ -16,10 +19,15 @@ assemble: {
   options: {
     plugins: ['assemble-middleware-kssnode', 'other/plugins/*.js'],
     kssnode: {
-      page: 'templates/pages/styleguide.hbs',
+      page: 'templates/pages/styleguide.hbs', // Page template for each section
       dest: 'dist/docs',
       src: 'src/css'
+      mask: '*.css' // Optional
     }
   }
 }
 ```
+
+## Getting started 
+
+Running the task creates an [Assemble Page Object](http://assemble.io/docs/Collections.html) for each [KSS](https://github.com/kneath/kss/blob/master/SPEC.md) root section and exposes a `sections` collection that is created with the [KSS Node Module API](https://github.com/kss-node/kss-node/wiki/Module-API) in every instance of the provided [Handlebars](http://handlebarsjs.com) template.

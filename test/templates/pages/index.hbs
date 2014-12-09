@@ -1,0 +1,19 @@
+---
+title: Home
+heading:  'Styleguide'
+posts: ['README.md']
+---
+<div class="container">
+  <div class="jumbotron">
+    <h1>{{ heading }}</h1>
+
+    <p class="lead">This documentation site is generated with <a href="https://github.com/assemble/assemble/">Assemble</a> togehter with a little help from <a href="https://github.com/kss-node/kss-node">KSS Node</a>.</p>
+    <p><a href="styleguide-1.html" class="btn btn-success btn-md" role="button">Styleguide &raquo;</a></p>
+  </div>
+
+  {{#each posts}}
+    <hr>
+    {{{md this}}}
+  {{/each}}
+  
+</div>
