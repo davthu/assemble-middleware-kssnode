@@ -3,7 +3,7 @@
 > Generates Assemble pages from Knyle Style Sheets (KSS) documented CSS. 
 
 Originally forked from [assemble-middleware-styleguide
-](https://github.com/tomsky/assemble-middleware-styleguide) with modifications from [KSS Node](https://github.com/kss-node/kss-node). This middleware does pretty much the same thing except that it relies directly on KSS node rather than another fork. Another reason to make this module was the need include KSS node generated pages in the site navigation as well as being able to parse arbitrary CSS files.
+](https://github.com/tomsky/assemble-middleware-styleguide) with modifications from [KSS Node](https://github.com/kss-node/kss-node). This middleware does pretty much the same thing except that it relies directly on KSS node rather than another fork. Another reason to make this module was the need to include KSS node generated pages in the site navigation as well as being able to parse arbitrary CSS files.
 
 ## Installation
 from the the command line, run:
@@ -18,13 +18,13 @@ To register the plugin with Assemble in your project's Gruntfile you can simply 
 
 ```js
 assemble: {
-	options {
-		layout: ['templates/layouts/default.hbs'],
+  options {
+    layout: ['templates/layouts/default.hbs'],
     partials: ['templates/partials/**/*.hbs'],
     plugins: ['assemble-middleware-kssnode', 'other/plugins/*.js']
-	},
+  },
   styleguide: {
-	  options: {
+    options: {
 	    kssnode: {
 	      page: 'templates/pages/styleguide.hbs', // Page template for each section
 	      dest: 'dist',
