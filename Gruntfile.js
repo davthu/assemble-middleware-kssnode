@@ -24,20 +24,25 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'index.js']
     },
     assemble: {
+      options: {
+        plugins: ['./index.js'],
+        layout: ['test/templates/layouts/default.hbs'],
+        partials: ['test/templates/partials/**/*.hbs']
+      },
       docs: {
         options: {
-        	plugins: ['./index.js'],
-        	layout: ['test/templates/layouts/default.hbs'],
-        	partials: ['test/templates/partials/**/*.hbs'],
           kssnode: {
             page: 'test/templates/pages/styleguide.hbs',
             dest: 'test/dist',
             src: 'test/css'
           }
         },
-        files: {
-          'test/dist/index.html': ['test/templates/pages/index.hbs']
-        }
+        files: [{
+          expand: true,
+          cwd: 'test/templates/pages',
+          src: ['**/*.hbs'],
+          dest: 'test/dist'
+        }]
       }
     },
     // Before generating new files, remove any files from previous build.

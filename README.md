@@ -19,13 +19,12 @@ To register the plugin with Assemble in your project's Gruntfile you can simply 
 ```js
 assemble: {
 	options {
-		layout: ['test/templates/layouts/default.hbs'],
-	}
+		layout: ['templates/layouts/default.hbs'],
+    partials: ['templates/partials/**/*.hbs'],
+    plugins: ['assemble-middleware-kssnode', 'other/plugins/*.js']
+	},
   styleguide: {
 	  options: {
-	  	layout: ['test/templates/layouts/default.hbs'],
-      partials: ['test/templates/partials/**/*.hbs'],
-	    plugins: ['assemble-middleware-kssnode', 'other/plugins/*.js'],
 	    kssnode: {
 	      page: 'templates/pages/styleguide.hbs', // Page template for each section
 	      dest: 'dist',
@@ -33,9 +32,12 @@ assemble: {
 	      mask: '*.css' // Optional
 	    }
 	  },
-	  files: {
-    	'dist/index.html': ['templates/pages/index.hbs']
-    }
+	  files: [{
+      expand: true,
+      cwd: 'templates/pages',
+      src: ['**/*.hbs'],
+      dest: 'dist'
+    }]
   }
 }
 ```
