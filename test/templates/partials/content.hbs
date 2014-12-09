@@ -1,6 +1,9 @@
+---
+component: content
+---
 {{#each sections}}
 <div id="section-{{reference}}">
-  <h{{depth}} class="docs-title">{{reference}} {{{header}}}</h{{depth}}>
+  <h{{depth}} class="page-header">{{reference}} {{{header}}}</h{{depth}}>
 
   {{#if description}}
   <div>
@@ -9,13 +12,12 @@
   {{/if}}
 
   {{#if markup}}
-    <div>
-      {{#each modifiers}}
-        {{{description}}}
+    {{#each modifiers}}
+      <p>
+        {{{description}}}<br>
         {{{modifierMarkup}}}
-      {{/each}}
-    </div>
-
+      </p>
+    {{/each}}
     <pre><code class="html">{{markup}}</code></pre>
   {{/if}}
 </div>
