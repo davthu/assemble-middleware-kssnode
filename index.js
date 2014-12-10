@@ -137,7 +137,6 @@ module.exports = function(params, done) {
 
       var pageContext = _.clone(parsedPage.data, true);
 
-      console.log(typeof rootSection);
       var pageObj = {
         data: _.extend(pageContext, {
           sections: jsonSections(childSections),
