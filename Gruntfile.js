@@ -8,7 +8,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jshint: {
       options: {
-        curly: true,
+        curly: false,
         eqeqeq: true,
         immed: true,
         latedef: true,
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         node: true,
         loopfunc: true
       },
-      all: ['Gruntfile.js', 'index.js']
+      all: ['Gruntfile.js', 'index.js', './lib/**/.js']
     },
     assemble: {
       options: {
@@ -32,9 +32,10 @@ module.exports = function(grunt) {
       docs: {
         options: {
           kssnode: {
-            page: 'test/templates/pages/styleguide.hbs',
-            dest: 'test/dist',
-            src: 'test/css'
+            page: 'test/templates/pages/styleguide.hbs', // Handlebars template
+            dest: 'test/dist', // Target directory
+            src: 'test/css', // Source directory with CSS files
+            mask: '*.css' // Optional filetype(s) to parse. Default to '*.css'
           }
         },
         files: [{
