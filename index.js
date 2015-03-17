@@ -16,7 +16,7 @@ module.exports = function(params, next) {
   console.log('Running "assemble-middleware-kssnode" plugin...');
 
   fs.readFile(options.page, 'utf8', function(err, data) {
-    if (err) throw err;
+    if (err) return next(err);
 
     if(!fs.lstatSync(options.src).isDirectory()) {
       return next(new Error('"' + options.src + '" is not a directory!'));
@@ -24,10 +24,10 @@ module.exports = function(params, next) {
 
     kss.traverse(options.src, {mask: options.mask || '*.css'}, function(err, styleguide) {
       // TODO: This callback will never be executed if no files are found!
-      if (err) throw err;
+      if (err) return next(err);
 
       assembleStyleguide(assemble, data, styleguide, options, function(err, data) {
-        if (err) throw err;
+        if (err) return next(err);
 
         next();
       });
